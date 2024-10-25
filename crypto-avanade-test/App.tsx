@@ -3,9 +3,7 @@ import React, { useEffect } from 'react';
 import { useFonts } from 'expo-font';
 import * as SplashScreen from 'expo-splash-screen';
 
-import Routes from '@routes/Routes';
-SplashScreen.preventAutoHideAsync();
-
+import Routes from '@/routes';
 SplashScreen.preventAutoHideAsync();
 
 export default function App() {

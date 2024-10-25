@@ -27,6 +27,6 @@ export const Title = styled.Text`
 `;
 
 export const Icon = styled(FontAwesome)`
-  color: #005a54;
+  color: #0c0c0c;
   font-size: 24px;
 `;

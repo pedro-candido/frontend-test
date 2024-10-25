@@ -1,7 +1,3 @@
-export enum Routers {
+export enum MainRouters {
   HOME = 'Home',
 }
-
-export type NavigationParams = {
-  [Routers.HOME]: undefined;
-};
