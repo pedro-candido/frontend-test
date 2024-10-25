@@ -31,7 +31,7 @@ interface Filter {
   maxNumAlgoOrders?: number;
 }
 
-interface Symbol {
+interface CryptoSymbol {
   symbol: string;
   status: string;
   baseAsset: string;
@@ -62,5 +62,5 @@ export interface ExchangeInfo {
   serverTime: number;
   rateLimits: RateLimit[];
   exchangeFilters: any[];
-  symbols: symbol[];
+  symbols: CryptoSymbol[];
 }
