@@ -1,14 +1,15 @@
-import { useNavigation } from '@react-navigation/native';
+import { NavigationProp, useNavigation } from '@react-navigation/native';
 
 import Button from '@/components/atoms/Button';
 import { MainRouters } from '@/routes/Routers';
+import { MainStackParams } from '@/routes/Stacks';
 
 import { Container } from './Home.styles';
 
 function Home() {
-  const { navigate } = useNavigation();
+  const { navigate } = useNavigation<NavigationProp<MainStackParams>>();
 
-  function handleNavigate(route: MainRouters) {
+  function handleNavigate(route: keyof MainStackParams) {
     navigate(route);
   }
 
