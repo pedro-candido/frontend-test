@@ -102,7 +102,7 @@ Segue imagem com conteúdo representado.
 
 - Adicionar rastreamento de erros e observabilidade com ferramentas como Dynatrace, Sentry, Crashlytics ou Datadog.
 - Adicionar SplashScreen animada.
-- Telas de Login, Cadastro, perfil e finalização de compra.
+- Telas de Login, Cadastro, perfil.
 - Ferramentas para Testes A/B, feature flags e tagueamento como o Firebase/Analytics.
 - Adição de recursos OTA(Over the air).
 - Documentação de Code Style.
