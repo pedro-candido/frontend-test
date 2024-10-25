@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components/native';
 
 import { FontAwesome } from '@expo/vector-icons';
 
-import { IButtonProps } from '@components/HeaderItem/HeaderItem.types';
+import { IButtonProps } from './HeaderItem.types';
 
 export const PressableButton = styled.Pressable<IButtonProps>`
   ${({ hasMarginRight }) =>

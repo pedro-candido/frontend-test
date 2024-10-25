@@ -1,7 +1,11 @@
 import React from 'react';
 
 import { Logo } from '@/assets';
-import { CartContainer, IconContainer, SafeContainer } from '@components/Header/Header.styles';
+import {
+  CartContainer,
+  IconContainer,
+  SafeContainer,
+} from '@components/molecules/Header/Header.styles';
 
 interface IHeader {
   RightIcon?: React.ReactNode;

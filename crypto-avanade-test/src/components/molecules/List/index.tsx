@@ -1,9 +1,9 @@
 import { FlashList } from '@shopify/flash-list';
 
 import { CryptoSymbol } from '@/types/getSymbols';
-import { Container } from '@components/List/List.styles';
-import Index from '@components/ListEmptyComponent';
-import ListItem from '@components/ListItem';
+import Index from '@components/atoms/ListEmptyComponent';
+import ListItem from '@components/atoms/ListItem';
+import { Container } from '@components/molecules/List/List.styles';
 
 import { IList } from './List.types';
 

@@ -1,5 +1,5 @@
 import { CryptoSymbol } from '@/types/getSymbols';
-import Label from '@components/Label';
+import Label from '@components/atoms/Label';
 
 import { Container } from './ListItem.styles';
 

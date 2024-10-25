@@ -1,4 +1,4 @@
-import HeaderItem from '@components/HeaderItem';
+import HeaderItem from '@components/atoms/HeaderItem';
 
 function HeaderRightItem() {
   const handlePress = () => {};

@@ -1,5 +1,5 @@
-import { Icon, PressableButton, Title } from '@components/HeaderItem/HeaderItem.styles';
-import { IButtonProps } from '@components/HeaderItem/HeaderItem.types';
+import { Icon, PressableButton, Title } from './HeaderItem.styles';
+import { IButtonProps } from './HeaderItem.types';
 
 function HeaderItem({
   type = 'primary',

@@ -1,11 +1,12 @@
 import { useEffect, useState } from 'react';
-import { View } from 'react-native';
 
-import { List } from '@/components/List';
+import { List } from '@/components/molecules/List';
 import { getData } from '@/store';
 import { CryptoSymbol } from '@/types/getSymbols';
 
-function Home() {
+import { Container, Title } from './FullList.styles';
+
+function FullList() {
   const [data, setData] = useState<CryptoSymbol[] | []>([]);
 
   useEffect(() => {
@@ -17,10 +18,11 @@ function Home() {
     callGetData();
   }, []);
   return (
-    <View>
+    <Container>
+      <Title>Lista Principal</Title>
       <List symbols={data} />
-    </View>
+    </Container>
   );
 }
 
-export default Home;
+export default FullList;
