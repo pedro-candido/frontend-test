@@ -15,6 +15,7 @@ function Home() {
   return (
     <Container>
       <Button text="Criar uma lista" />
+      <Button text="Listas Criadas" />
       <Button
         onPress={() => handleNavigate(MainRouters.FULL_LIST)}
         text="Verificar lista completa"

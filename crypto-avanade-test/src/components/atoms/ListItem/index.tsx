@@ -7,7 +7,7 @@ function Product({ symbol, baseAsset, status, quoteAsset }: CryptoSymbol) {
   console.log({ symbol });
   return (
     <Container>
-      <Label>{baseAsset}</Label>
+      <Label>{symbol}</Label>
     </Container>
   );
 }

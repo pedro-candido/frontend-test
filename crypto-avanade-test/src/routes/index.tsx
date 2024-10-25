@@ -31,6 +31,13 @@ function Routes() {
             header: () => <Header LeftIcon={<HeaderLeftItem />} />,
           }}
         />
+        {/* <Screen
+          name={MainRouters.CREATE_LIST}
+          component={<></>}
+          options={{
+            header: () => <Header LeftIcon={<HeaderLeftItem />} />,
+          }}
+        /> */}
       </Navigator>
     </NavigationContainer>
   );

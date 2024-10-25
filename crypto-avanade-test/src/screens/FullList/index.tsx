@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 
+import { getData } from '@/api/utils';
 import { List } from '@/components/molecules/List';
-import { getData } from '@/store';
 import { CryptoSymbol } from '@/types/getSymbols';
 
 import { Container, Title } from './FullList.styles';
@@ -19,7 +19,7 @@ function FullList() {
   }, []);
   return (
     <Container>
-      <Title>Lista Principal</Title>
+      <Title>Lista com todos simbolos</Title>
       <List symbols={data} />
     </Container>
   );
