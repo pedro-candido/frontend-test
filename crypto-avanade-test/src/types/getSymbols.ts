@@ -1,11 +1,11 @@
-interface RateLimit {
+export interface RateLimit {
   rateLimitType: string;
   interval: string;
   intervalNum: number;
   limit: number;
 }
 
-interface Filter {
+export interface Filter {
   filterType: string;
   minPrice?: string;
   maxPrice?: string;
@@ -31,7 +31,7 @@ interface Filter {
   maxNumAlgoOrders?: number;
 }
 
-interface CryptoSymbol {
+export interface CryptoSymbol {
   symbol: string;
   status: string;
   baseAsset: string;
