@@ -1,10 +1,11 @@
 import { useEffect, useState } from 'react';
 
 import { getData } from '@/api/utils';
+import { ScreenContainer } from '@/components/atoms/ScreenContainer/index.styles';
 import { List } from '@/components/molecules/List';
 import { CryptoSymbol } from '@/types/getSymbols';
 
-import { Container, Title } from './FullList.styles';
+import { Title } from './FullList.styles';
 
 function FullList() {
   const [data, setData] = useState<CryptoSymbol[] | []>([]);
@@ -18,10 +19,10 @@ function FullList() {
     callGetData();
   }, []);
   return (
-    <Container>
+    <ScreenContainer>
       <Title>Lista com todos simbolos</Title>
       <List symbols={data} />
-    </Container>
+    </ScreenContainer>
   );
 }
 
