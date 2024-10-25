@@ -1,26 +1,32 @@
+import { useEffect } from 'react';
+
 import { NavigationProp, useNavigation } from '@react-navigation/native';
 
+import { callApiIfNecessary } from '@/api/utils';
 import Button from '@/components/atoms/Button';
-import { ScreenContainer } from '@/components/atoms/ScreenContainer/index.styles';
+import { useListsContext } from '@/context';
 import { MainRouters } from '@/routes/Routers';
 import { MainStackParams } from '@/routes/Stacks';
 
-function Home() {
-  const { navigate } = useNavigation<NavigationProp<MainStackParams>>();
+import { Container } from './Home.styles';
 
-  function handleNavigate(route: keyof MainStackParams) {
-    navigate(route);
-  }
+function Home() {
+  const { setFullList, fullList } = useListsContext();
+
+  const { navigate } = useNavigation<NavigationProp<MainStackParams>>();
+  useEffect(() => {
+    if (fullList.length === 0) {
+      callApiIfNecessary(setFullList);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [fullList.length]);
 
   return (
-    <ScreenContainer>
-      <Button text="Criar uma lista" />
-      <Button text="Listas Criadas" />
-      <Button
-        onPress={() => handleNavigate(MainRouters.FULL_LIST)}
-        text="Verificar lista completa"
-      />
-    </ScreenContainer>
+    <Container>
+      <Button onPress={() => navigate(MainRouters.CREATE_LIST)} text="Criar uma lista" />
+      <Button onPress={() => navigate(MainRouters.LISTS_CREATED)} text="Listas Criadas" />
+      <Button onPress={() => navigate(MainRouters.FULL_LIST)} text="Verificar lista completa" />
+    </Container>
   );
 }
 

@@ -8,10 +8,10 @@ import { MainStackParams } from '@routes/Stacks';
 const { backButton } = testIds;
 
 function HeaderLeftItem() {
-  const { goBack } = useNavigation<StackNavigationProp<MainStackParams>>();
+  const { popToTop } = useNavigation<StackNavigationProp<MainStackParams>>();
 
   const handlePress = () => {
-    goBack();
+    popToTop();
   };
 
   return <HeaderItem testID={backButton} iconName={'chevron-left'} onPress={handlePress} />;

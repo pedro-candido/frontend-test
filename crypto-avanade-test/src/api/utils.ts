@@ -1,5 +1,5 @@
 import { api } from '@/api';
-import { ExchangeInfo } from '@/types/getSymbols';
+import { CryptoSymbol, ExchangeInfo } from '@/types/getSymbols';
 
 async function getSymbols() {
   try {
@@ -19,4 +19,11 @@ async function getData() {
   return symbols;
 }
 
-export { getData, getSymbols };
+async function callApiIfNecessary(setFullList: (param: CryptoSymbol[]) => void) {
+  const content = await getData();
+  setFullList(content);
+
+  return content;
+}
+
+export { getData, getSymbols, callApiIfNecessary };

@@ -1,6 +1,5 @@
 import styled from 'styled-components/native';
 
-import { Logo } from '@/assets';
 
 export const IconContainer = styled.View`
   width: 50px;
@@ -19,7 +18,7 @@ export const CartContainer = styled.View`
 `;
 
 export const RedPoint = styled.View`
-  background-color: #a51414;
+  background-color: #e00;
   right: 40%;
   top: 35%;
   width: 10px;

@@ -8,7 +8,7 @@ function Button({ type = 'primary', text, iconName, ...rest }: IButtonProps) {
       type={type}
       {...rest}
     >
-      {text && <Title>{text}</Title>}
+      {text && <Title type={type}>{text}</Title>}
       {iconName && <Icon name={iconName} />}
     </PressableButton>
   );

@@ -4,6 +4,8 @@ import { useFonts } from 'expo-font';
 import * as SplashScreen from 'expo-splash-screen';
 
 import Routes from '@/routes';
+
+import { ListsContext } from './src/context';
 SplashScreen.preventAutoHideAsync();
 
 export default function App() {
@@ -31,5 +33,9 @@ export default function App() {
   // AppEntryPoint = require('./.storybook').default;
 
   // Change from Routes to AppEntryPoint to test storybook
-  return <AppEntryPoint />;
+  return (
+    <ListsContext>
+      <AppEntryPoint />
+    </ListsContext>
+  );
 }

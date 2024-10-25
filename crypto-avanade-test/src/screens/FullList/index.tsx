@@ -1,27 +1,19 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 
-import { getData } from '@/api/utils';
+import { callApiIfNecessary } from '@/api/utils';
 import { ScreenContainer } from '@/components/atoms/ScreenContainer/index.styles';
 import { List } from '@/components/molecules/List';
-import { CryptoSymbol } from '@/types/getSymbols';
+import { useListsContext } from '@/context';
 
 import { Title } from './FullList.styles';
 
 function FullList() {
-  const [data, setData] = useState<CryptoSymbol[] | []>([]);
+  const { fullList } = useListsContext();
 
-  useEffect(() => {
-    async function callGetData() {
-      const content = await getData();
-      setData(content);
-    }
-
-    callGetData();
-  }, []);
   return (
     <ScreenContainer>
       <Title>Lista com todos simbolos</Title>
-      <List symbols={data} />
+      <List symbols={fullList} />
     </ScreenContainer>
   );
 }
