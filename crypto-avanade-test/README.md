@@ -60,8 +60,8 @@ Segue imagem com conteúdo representado.
 4. Yarn
 5. Expo CLI
 6. Android Studio - Versão recomendada Jellyfish 2023.3.1
-7. Graddle version - Versão 8.6
-8. XCode - versão recomendada 15.4
+7. Gradle version - Versão 8.6
+8. XCode - versão recomendada 16.0
 9. Testes realizados no iOS 17.4 - iPhone 15 Pro e no Pixel 8(API 34)
 
 ## Rodar o projeto
@@ -85,17 +85,6 @@ Segue imagem com conteúdo representado.
    yarn ios
    ```
 
-## Para utilizar o storybook
-
-1. Vá para o arquivo `./App.tsx` e troque o return
-
-```javascript
-   // from
-  return <Routes />;
-  // to
-  return <AppEntryPoint />
-```
-
 2. Rode o yarn start novamente ou atualize o metro.
 
 ## Melhorias para o projeto caso fosse um projeto para Produção
@@ -106,3 +95,8 @@ Segue imagem com conteúdo representado.
 - Ferramentas para Testes A/B, feature flags e tagueamento como o Firebase/Analytics.
 - Adição de recursos OTA(Over the air).
 - Documentação de Code Style.
+
+## O que faltou?
+
+- Realizar os testes unitários
+- Estilizar da maneira adequada
