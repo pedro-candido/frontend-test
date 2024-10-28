@@ -1,21 +1,23 @@
 import { View } from 'react-native';
 
 import { useNavigation } from '@react-navigation/native';
+import { StackNavigationProp } from '@react-navigation/stack';
 import { FlashList } from '@shopify/flash-list';
 
 import Button from '@/components/atoms/Button';
 import { useListsContext } from '@/context';
 import { MainRouters } from '@/routes/Routers';
+import { MainStackParams } from '@/routes/Stacks.js';
 
-import { Container, ContainerWithoutItems, Title } from './Cart.styles.ts';
+import { Container, ContainerWithoutItems, Title } from './Cart.styles';
 import { AddedCrypto } from '../../components/atoms/AddedCrypto';
 
 function Cart() {
-  const { selectedItems, setLists, setSelectedItems } = useListsContext();
-  const { navigate } = useNavigation();
+  const { selectedItems, setCreatedList, setSelectedItems } = useListsContext();
+  const { navigate } = useNavigation<StackNavigationProp<MainStackParams>>();
 
   const handlePress = () => {
-    setLists(selectedItems);
+    setCreatedList(selectedItems);
 
     setSelectedItems([]);
 

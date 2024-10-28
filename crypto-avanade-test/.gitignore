@@ -37,3 +37,5 @@ yarn-error.*
 *storybook.log
 
 coverage/
+
+.env

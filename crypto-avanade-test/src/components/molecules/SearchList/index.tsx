@@ -58,6 +58,7 @@ function SearchList({ symbols, textToFilter = '' }: ISearchList) {
         ListEmptyComponent={EmptyList}
         estimatedItemSize={200}
         renderItem={({ item }: { item: CryptoSymbol }) => {
+          console.log({ item });
           const isSelected = selectedItems.includes(item.symbol);
           // eslint-disable-next-line react-hooks/rules-of-hooks
           return (

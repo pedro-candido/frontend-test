@@ -11,24 +11,24 @@ import {
 import { CryptoSymbol } from '@/types/getSymbols';
 
 const Context = createContext({
-  lists: [] as CryptoSymbol[],
-  setLists: (() => void 0) as Dispatch<SetStateAction<[] | CryptoSymbol[]>>,
+  createdList: [] as string[],
+  setCreatedList: (() => void 0) as Dispatch<SetStateAction<[] | string[]>>,
   fullList: [] as CryptoSymbol[],
   setFullList: (() => void 0) as Dispatch<SetStateAction<[] | CryptoSymbol[]>>,
-  selectedItems: [] as CryptoSymbol[],
-  setSelectedItems: (() => void 0) as Dispatch<SetStateAction<[] | CryptoSymbol[]>>,
+  selectedItems: [] as string[],
+  setSelectedItems: (() => void 0) as Dispatch<SetStateAction<[] | string[]>>,
 });
 
 export const ListsContext: FC<PropsWithChildren> = ({ children }) => {
-  const [lists, setLists] = useState<[] | CryptoSymbol[]>([]);
-  const [selectedItems, setSelectedItems] = useState<[] | CryptoSymbol[]>([]);
+  const [createdList, setCreatedList] = useState<[] | string[]>([]);
+  const [selectedItems, setSelectedItems] = useState<[] | string[]>([]);
   const [fullList, setFullList] = useState<[] | CryptoSymbol[]>([]);
 
   return (
     <Context.Provider
       value={{
-        lists,
-        setLists,
+        createdList,
+        setCreatedList,
         selectedItems,
         setSelectedItems,
         fullList,

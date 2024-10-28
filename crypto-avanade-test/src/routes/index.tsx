@@ -45,7 +45,7 @@ function Routes() {
           name={MainRouters.LISTS_CREATED}
           component={ListsCreated}
           options={{
-            header: () => <Header LeftIcon={<HeaderLeftItem />} RightIcon={<HeaderRightItem />} />,
+            header: () => <Header LeftIcon={<HeaderLeftItem />} />,
           }}
         />
         <Screen
