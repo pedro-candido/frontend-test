@@ -1,5 +1,3 @@
-import { CryptoSymbol } from '@/types/getSymbols';
-
 import { Container, StyledLabel } from './AddedCrypto.styles';
 
 interface IAddedCrypto {
@@ -11,12 +9,6 @@ function AddedCrypto({ symbol }: IAddedCrypto) {
   return (
     <Container>
       <StyledLabel numberOfLines={1}>{symbol}</StyledLabel>
-      {/* <StyledButton
-        testID={productTestId}
-        onPress={handlePress}
-        type={'secondary'}
-        iconName={'close'}
-      /> */}
     </Container>
   );
 }

@@ -2,11 +2,13 @@ import { useEffect, useState } from 'react';
 import { View } from 'react-native';
 
 import { useNavigation } from '@react-navigation/core';
+import { StackNavigationProp } from '@react-navigation/stack';
 import { FlashList } from '@shopify/flash-list';
 
 import Button from '@/components/atoms/Button';
 import { useListsContext } from '@/context';
 import { MainRouters } from '@/routes/Routers';
+import { MainStackParams } from '@/routes/Stacks';
 import { CryptoSymbol } from '@/types/getSymbols';
 import EmptyList from '@components/atoms/ListEmptyComponent';
 import { Container } from '@components/molecules/List/List.styles';
@@ -15,7 +17,7 @@ import { ISearchList } from './SearchList.types';
 
 function SearchList({ symbols, textToFilter = '' }: ISearchList) {
   const { selectedItems, setSelectedItems } = useListsContext();
-  const { navigate } = useNavigation();
+  const { navigate } = useNavigation<StackNavigationProp<MainStackParams>>();
 
   const [filteredSymbols, setFilteredSymbols] = useState(symbols);
 
@@ -35,7 +37,7 @@ function SearchList({ symbols, textToFilter = '' }: ISearchList) {
   }, [textToFilter]);
 
   const handlePress = (symbol: string) => {
-    setSelectedItems((prevSelectedItems) => {
+    setSelectedItems((prevSelectedItems: string[]) => {
       if (prevSelectedItems.includes(symbol)) {
         // Remove o item da lista
         return prevSelectedItems.filter((item) => item !== symbol);

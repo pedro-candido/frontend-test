@@ -1,7 +1,7 @@
 import { FlashList } from '@shopify/flash-list';
 
 import { useListsContext } from '@/context';
-import AddedCrypto from '@components/atoms/AddedCrypto';
+import { AddedCrypto } from '@components/atoms/AddedCrypto';
 
 function AddedCryptoList() {
   const { selectedItems } = useListsContext();
