@@ -24,6 +24,7 @@ function ListsCreated() {
 
   return (
     <ScreenContainer>
+      <Text>Symbol | Updated Price | Best bid price | Best Ask price</Text>
       <FlashList
         ListEmptyComponent={
           isLoading ? (
@@ -43,8 +44,9 @@ function ListsCreated() {
             return (
               <StyledDarkLine>
                 <StyledLightText>
-                  {item.s} {Number(item.h).toFixed(6) ?? '-'}{' '}
-                  {item.b ? Number(item.b).toFixed(6) : '-'}
+                  {item.s} | {`${Number(item.h).toFixed(4) ?? '-'}`}{' '}
+                  {item.b ? Number(item.b).toFixed(4) : '-'}{' '}
+                  {item.a ? Number(item.a).toFixed(4) : '-'}
                 </StyledLightText>
               </StyledDarkLine>
             );
@@ -52,7 +54,9 @@ function ListsCreated() {
           return (
             <StyledLine>
               <StyledText>
-                {item.s} {Number(item.h).toFixed(4)}
+                {item.s} {Number(item.h).toFixed(4) ?? '-'}{' '}
+                {item.b ? Number(item.b).toFixed(4) : '-'}{' '}
+                {item.a ? Number(item.a).toFixed(4) : '-'}
               </StyledText>
             </StyledLine>
           );
@@ -60,15 +64,6 @@ function ListsCreated() {
         data={values}
         estimatedItemSize={100}
       />
-
-      {/* {values.map((item, index) => {
-        console.log(JSON.stringify(item));
-        return (
-          <View key={index}>
-            <Text>{JSON.stringify(item)}</Text>
-          </View>
-        );
-      })} */}
     </ScreenContainer>
   );
 }
